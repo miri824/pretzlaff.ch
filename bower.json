@@ -1,0 +1,19 @@
+{
+  "name": "pretzlaff.ch",
+  "version": "0.0.0",
+  "authors": [
+    "Pierre Spring <pierre@nelm.io>"
+  ],
+  "license": "-",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "inuit-starter-kit": "~0.2.8"
+  }
+}

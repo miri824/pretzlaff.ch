@@ -1,0 +1,22 @@
+extend ../__layout.jade
+
+-current.o = current.path.reduce(function (previousValue, currentValue, index) {
+-   if (index+1 === current.path.length) {
+-       return previousValue;
+-   }
+-   return previousValue[currentValue]
+-}, public)
+
+block content
+    h1= name
+
+    img(src='./main.jpg')
+
+    block content
+      p Content missing
+
+    if links
+        ul
+        for link in links
+            li
+                a(href='http://#{link}')= link

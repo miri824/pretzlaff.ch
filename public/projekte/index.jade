@@ -1,0 +1,19 @@
+extend ../__layout.jade
+
+block content
+
+    -var data = current.path.reduce(function (previousValue, currentValue, index) {
+    -   if (index+1 === current.path.length) {
+    -       return previousValue;
+    -   }
+    -   return previousValue[currentValue]
+    -}, public)
+
+    h1 Projekte
+
+    ul
+        for projekt in projekte
+            li
+                a(href="./#{projekt}/")
+                    img(src="./#{projekt}/thumbnail.jpg")
+                    h2= data[projekt]._data.index.name

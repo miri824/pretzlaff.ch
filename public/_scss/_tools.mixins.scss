@@ -35,3 +35,28 @@
         font-weight: 700;
     }
 }
+
+// Create all specified heading styles in one go.
+@mixin headings($from: 1, $to: 6) {
+    %base-heading {
+        @content;
+    }
+    @if $from >= 1 and $to <= 6{
+        @for $i from $from through $to{
+            h#{$i} {
+                @extend %base-heading;
+            }
+        }
+    }
+}
+
+// @mixin visuallyhidden {
+//     margin: -1px;
+//     padding: 0;
+//     width: 1px;
+//     height: 1px;
+//     overflow: hidden;
+//     clip: rect(0 0 0 0);
+//     clip: rect(0, 0, 0, 0);
+//     position: absolute;
+// }

@@ -1,0 +1,22 @@
+a {
+    text-decoration: none;
+    color: $color-dark;
+    display: inline-block;
+    position: relative;
+
+    @include attention() {
+        // text-decoration: underline;
+        // border-bottom: solid 1px $color-light;
+        // box-shadow: 0 1px 0 #000;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 1px;
+            bottom: 12%;
+            background-color: $color-light;
+            z-index: -1;
+        }
+    }
+}

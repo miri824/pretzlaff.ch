@@ -1,0 +1,8 @@
+.sub-item {
+    padding: 20px 0;
+    margin: 0;
+    border-bottom: solid 1px $color-light;
+    &:first-child {
+        border-top: solid 1px $color-light;
+    }
+}

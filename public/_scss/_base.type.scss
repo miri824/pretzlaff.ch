@@ -1,0 +1,7 @@
+/**
+ * Headings 1–6.
+ */
+@include headings() {
+    @include font-weight(light);
+    text-transform: lowercase;
+}

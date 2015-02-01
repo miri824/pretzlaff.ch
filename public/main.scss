@@ -1,6 +1,8 @@
 // SETTINGS
+@import "_scss/settings.defaults.overwrites";
 @import "bower_components/inuit-defaults/settings.defaults";
 @import "bower_components/inuit-responsive-settings/settings.responsive";
+@import "_scss/settings.colors";
 
 
 // TOOLS
@@ -17,3 +19,24 @@
 
 // BASE
 @import "bower_components/inuit-page/base.page";
+@import "_scss/base.page";
+$inuit-heading-size-1: 48px;
+$inuit-heading-size-2: 28px;
+$inuit-heading-size-3: 14px;
+@import "bower_components/inuit-headings/base.headings";
+@import "_scss/base.type";
+$inuit-layout-gutter: 39px;
+@import "bower_components/inuit-layout/objects.layout.scss";
+@import "_scss/base.link";
+
+// OBJECTS
+@import "_scss/objects.wrapper";
+
+// COMPONENTS
+@import "_scss/components.page-header";
+@import "_scss/components.site-nav";
+@import "_scss/components.sub-item.scss";
+@import "_scss/components.map.scss";
+
+// TRUMPS
+@import "bower_components/inuit-widths/trumps.widths";

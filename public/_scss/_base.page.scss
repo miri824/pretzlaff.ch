@@ -1,0 +1,8 @@
+html {
+    @include font-weight(regular);
+    font-family: "Ubuntu", sans-serif;
+    height: 100%;
+}
+body {
+    height: 100%;
+}

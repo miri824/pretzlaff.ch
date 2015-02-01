@@ -1,10 +1,20 @@
 doctype
 html
   head
-    //- link(rel='stylesheet' href='///fonts.googleapis.com/css?family=Ubuntu:300,400,700')
+    link(type='text/css' rel='stylesheet' href='//fonts.googleapis.com/css?family=Ubuntu:300,400,700')
     link(rel="stylesheet" href="/main.css")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
   body
+    .wrapper
+            .site-nav(class=isLanding?"site-nav--dark-background":"")
+                .site-nav__logo
+                    a.site-nav__logo-link(href="/") Miriam Pretzlaff
+                ul.site-nav__list
+                    li.site-nav__list-item
+                        a.site-nav__list-item-link(href="/kontakt/") Kontakt
+                    li.site-nav__list-item
+                        //- .site-nav__list-item--active
+                        a.site-nav__list-item-link(href="#") Projekte
+                    li.site-nav__list-item
+                        a.site-nav__list-item-link(href="#") Über mich
     block content
-
-    block footer
-        h1 footer

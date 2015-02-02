@@ -1,6 +1,7 @@
 {
     "index": {
         "name": "APiX",
+        "kompetenz": "Luftaufnahmen",
         "links": ["www.apix.ch"]
     }
 }

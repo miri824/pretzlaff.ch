@@ -35,8 +35,11 @@ $inuit-layout-gutter: 39px;
 // COMPONENTS
 @import "_scss/components.page-header";
 @import "_scss/components.site-nav";
-@import "_scss/components.sub-item.scss";
-@import "_scss/components.map.scss";
+@import "_scss/components.sub-item";
+@import "_scss/components.map";
+@import "_scss/components.project-link";
+@import "_scss/components.project-detail";
+@import "_scss/components.page-footer";
 
 // TRUMPS
 @import "bower_components/inuit-widths/trumps.widths";

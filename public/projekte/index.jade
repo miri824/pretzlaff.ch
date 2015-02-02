@@ -9,11 +9,17 @@ block content
     -   return previousValue[currentValue]
     -}, public)
 
-    h1 Projekte
+    .wrapper
+        h1 Projekte
+        ul.layout
+            for projekt in projekte
+                li.layout__item.project-link(class="1/3")
+                    a.project-link__link(href="./#{projekt}/")
+                        .project-link__image(style="background-image: url('./#{projekt}/thumbnail.jpg')")
+                        .project-link__image-bw(style="background-image: url('./#{projekt}/thumbnail-bw.jpg')")
+                        .project-link__hover-overlay
+                        h2.project-link__header= data[projekt]._data.index.name
+                        h3.project-link__header.project-link__header--expertise= data[projekt]._data.index.kompetenz
 
-    ul
-        for projekt in projekte
-            li
-                a(href="./#{projekt}/")
-                    img(src="./#{projekt}/thumbnail.jpg")
-                    h2= data[projekt]._data.index.name
+block headScripts
+    script(src="/scripts/modernizr.custom.js")

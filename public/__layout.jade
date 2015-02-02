@@ -1,20 +1,38 @@
 doctype
-html
+html.no-js
   head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title Miriam Pretzlaff
+    //- TODO
+    //- meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     link(type='text/css' rel='stylesheet' href='//fonts.googleapis.com/css?family=Ubuntu:300,400,700')
     link(rel="stylesheet" href="/main.css")
-    meta(name="viewport", content="width=device-width, initial-scale=1")
+    block headScripts
   body
+
+    -var isLanding = current.path[0] === 'index'
+
+    -navigation = navigation.map(function (navItem) {
+    -    if (navItem.path === current.path[0]) {
+    -        navItem.active = true
+    -    }
+    -    return navItem;
+    -})
+
     .wrapper
             .site-nav(class=isLanding?"site-nav--dark-background":"")
                 .site-nav__logo
                     a.site-nav__logo-link(href="/") Miriam Pretzlaff
                 ul.site-nav__list
-                    li.site-nav__list-item
-                        a.site-nav__list-item-link(href="/kontakt/") Kontakt
-                    li.site-nav__list-item
-                        //- .site-nav__list-item--active
-                        a.site-nav__list-item-link(href="#") Projekte
-                    li.site-nav__list-item
-                        a.site-nav__list-item-link(href="#") Über mich
+                    each navItem in navigation
+                        li.site-nav__list-item(class=navItem.active?"site-nav__list-item--active":"")
+                            a.site-nav__list-item-link(href="/#{navItem.path}/") #{navItem.label}
     block content
+
+    if !isLanding
+        .wrapper
+            .page-footer
+
+    block scripts

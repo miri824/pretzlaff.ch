@@ -1,22 +1,36 @@
 extend ../__layout.jade
 
--current.o = current.path.reduce(function (previousValue, currentValue, index) {
--   if (index+1 === current.path.length) {
--       return previousValue;
--   }
--   return previousValue[currentValue]
--}, public)
+//- -current.o = current.path.reduce(function (previousValue, currentValue, index) {
+//- -   if (index+1 === current.path.length) {
+//- -       return previousValue;
+//- -   }
+//- -   return previousValue[currentValue]
+//- -}, public)
 
 block content
-    h1= name
+    .wrapper
 
-    img(src='./main.jpg')
+        h1= name
+    div.project-detail--main-image-parallax-container(data-project-detail-parallax)
+        div.project-detail--main-image-wrapper
+            div.project-detail--main-image(
+                style="background-image: url('main.jpg')",
+                data-project-detail-parallax-image
+                )
+        //- img(src='./main.jpg')
 
-    block content
-      p Content missing
+    block projectContent
+      p projectContent missing
 
     if links
         ul
         for link in links
             li
                 a(href='http://#{link}')= link
+
+block scripts
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js")
+    script(src="/scripts/project.detail.js")
+
+block headScripts
+    script(src="/scripts/modernizr.custom.js")

@@ -13,7 +13,7 @@ block content
         h1 Projekte
         ul.layout
             for projekt in projekte
-                li.layout__item.project-link(class="1/3")
+                li.layout__item.project-link.lap-and-up-one-third
                     a.project-link__link(href="./#{projekt}/")
                         .project-link__image(style="background-image: url('./#{projekt}/thumbnail.jpg')")
                         .project-link__image-bw(style="background-image: url('./#{projekt}/thumbnail-bw.jpg')")
@@ -21,5 +21,3 @@ block content
                         h2.project-link__header= data[projekt]._data.index.name
                         h3.project-link__header.project-link__header--expertise= data[projekt]._data.index.kompetenz
 
-block headScripts
-    script(src="/scripts/modernizr.custom.js")

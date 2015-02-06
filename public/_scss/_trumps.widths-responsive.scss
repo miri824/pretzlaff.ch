@@ -1,0 +1,23 @@
+@include media-query(lap-and-up) {
+
+    // .lap-and-up-one-whole       { width: 100%; }
+
+    // .lap-and-up-one-half        { width: 50%; }
+
+    .lap-and-up-one-third       { width: 33.333333333%; }
+    .lap-and-up-two-thirds      { width: 66.666666666%; }
+
+    // .lap-and-up-one-quarter     { width: 25%; }
+    // .lap-and-up-three-quarters  { width: 75%; }
+
+    // .lap-and-up-one-fifth       { width: 20%; }
+    // .lap-and-up-two-fifths      { width: 40%; }
+    // .lap-and-up-three-fifths    { width: 60%; }
+    // .lap-and-up-four-fifths     { width: 80%; }
+
+    // .lap-and-up-one-tenth       { width: 10%; }
+    // .lap-and-up-three-tenths    { width: 30%; }
+    // .lap-and-up-seven-tenths    { width: 70%; }
+    // .lap-and-up-nine-tenths     { width: 90%; }
+
+}

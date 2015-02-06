@@ -16,21 +16,37 @@ block content
             div.project-detail--main-image(
                 style="background-image: url('main.jpg')",
                 data-project-detail-parallax-image
-                )
-        //- img(src='./main.jpg')
+            )
 
     block projectContent
       p projectContent missing
 
     if links
-        ul
-        for link in links
-            li
-                a(href='http://#{link}')= link
+        .wrapper
+            .layout
+                .layout__item.lap-and-up-one-third
+                    h2.project-detail__title Links
+                    ul.project-detail__links
+                        for link in links
+                            li.project-detail__link
+                                a(href='http://#{link}')= link
+
+    if relatedProjects && relatedProjects.length
+        .wrapper
+            .related-projects
+                h1 Projekte
+                ul.layout
+                    for projekt in relatedProjects
+                        li.layout__item.project-link.lap-and-up-one-third
+                            a.project-link__link(href="/projekte/#{projekt}/")
+                                .project-link__image(style="background-image: url('/projekte/#{projekt}/thumbnail.jpg')")
+                                .project-link__image-bw(style="background-image: url('/projekte/#{projekt}/thumbnail-bw.jpg')")
+                                .project-link__hover-overlay
+                                h2.project-link__header= public.projekte[projekt]._data.index.name
+                                h3.project-link__header.project-link__header--expertise= public.projekte[projekt]._data.index.kompetenz
+
 
 block scripts
     script(src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js")
+    script window.jQuery || document.write('<script src="/bower_components/jquery/dist/jquery.min.js"><\/script>')
     script(src="/scripts/project.detail.js")
-
-block headScripts
-    script(src="/scripts/modernizr.custom.js")

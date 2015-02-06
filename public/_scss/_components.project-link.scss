@@ -3,17 +3,24 @@
     margin-bottom: 37px;
     display: block;
 
-    .no-touch & {
-        @include attention() {
-            &:before {
-                content: none;
-            }
+    @include attention() {
+        &:before {
+            // avoid line hover effects
+            content: none;
+        }
+        .project-link__image-bw,
+        .project-link__hover-overlay {
+            display: block;
+        }
+        .touch & {
+            // avoid hover effects on touch devices
             .project-link__image-bw,
             .project-link__hover-overlay {
-                display: block;
+                display: none;
             }
         }
     }
+
 }
 
 .project-link__hover-overlay {

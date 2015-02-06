@@ -40,6 +40,8 @@ $inuit-layout-gutter: 39px;
 @import "_scss/components.project-link";
 @import "_scss/components.project-detail";
 @import "_scss/components.page-footer";
+@import "_scss/components.related-projects";
 
 // TRUMPS
-@import "bower_components/inuit-widths/trumps.widths";
+// @import "bower_components/inuit-widths/trumps.widths";
+@import "_scss/trumps.widths-responsive";

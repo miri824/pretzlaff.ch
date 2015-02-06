@@ -1,15 +1,19 @@
 extend ../__layout.jade
 
-//- -current.o = current.path.reduce(function (previousValue, currentValue, index) {
-//- -   if (index+1 === current.path.length) {
-//- -       return previousValue;
-//- -   }
-//- -   return previousValue[currentValue]
-//- -}, public)
+-var basePath = current.path.reduce(function (memory, path, index, array) {
+-    if (index === 0 && path === 'public') {
+-        return '';
+-    }
+-    if (index+1 === array.length) {
+-        if (path === 'index') {
+-            return memory;
+-        }
+-    }
+-    return memory + '../';
+-}, '');
 
 block content
     .wrapper
-
         h1= name
     div.project-detail--main-image-parallax-container(data-project-detail-parallax)
         div.project-detail--main-image-wrapper
@@ -38,9 +42,9 @@ block content
                 ul.layout
                     for projekt in relatedProjects
                         li.layout__item.project-link.lap-and-up-one-third
-                            a.project-link__link(href="/projekte/#{projekt}/")
-                                .project-link__image(style="background-image: url('/projekte/#{projekt}/thumbnail.jpg')")
-                                .project-link__image-bw(style="background-image: url('/projekte/#{projekt}/thumbnail-bw.jpg')")
+                            a.project-link__link(href="#{basePath}projekte/#{projekt}/")
+                                .project-link__image(style="background-image: url('#{basePath}projekte/#{projekt}/thumbnail.jpg')")
+                                .project-link__image-bw(style="background-image: url('#{basePath}projekte/#{projekt}/thumbnail-bw.jpg')")
                                 .project-link__hover-overlay
                                 h2.project-link__header= public.projekte[projekt]._data.index.name
                                 h3.project-link__header.project-link__header--expertise= public.projekte[projekt]._data.index.kompetenz
@@ -48,5 +52,5 @@ block content
 
 block scripts
     script(src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js")
-    script window.jQuery || document.write('<script src="/bower_components/jquery/dist/jquery.min.js"><\/script>')
-    script(src="/scripts/project.detail.js")
+    script window.jQuery || document.write('<script src="#{basePath}bower_components/jquery/dist/jquery.min.js"><\/script>')
+    script(src="#{basePath}scripts/project.detail.js")

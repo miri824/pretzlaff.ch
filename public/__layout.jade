@@ -1,5 +1,16 @@
 doctype
 html.no-js
+  -var basePath = current.path.reduce(function (memory, path, index, array) {
+  -    if (index === 0 && path === 'public') {
+  -        return '';
+  -    }
+  -    if (index+1 === array.length) {
+  -        if (path === 'index') {
+  -            return memory;
+  -        }
+  -    }
+  -    return memory + '../';
+  -}, '');
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
@@ -8,27 +19,21 @@ html.no-js
     //- meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(type='text/css' rel='stylesheet' href='//fonts.googleapis.com/css?family=Ubuntu:300,400,700')
-    link(rel="stylesheet" href="/main.css")
-    script(src="/scripts/modernizr.custom.js")
+    link(rel="stylesheet" href="#{basePath}main.css")
+    script(src="#{basePath}scripts/modernizr.custom.js")
   body
 
     -var isLanding = current.path[0] === 'index'
 
-    -navigation = navigation.map(function (navItem) {
-    -    if (navItem.path === current.path[0]) {
-    -        navItem.active = true
-    -    }
-    -    return navItem;
-    -})
-
     .wrapper
-            .site-nav(class=isLanding?"site-nav--dark-background":"")
-                .site-nav__logo
-                    a.site-nav__logo-link(href="/") Miriam Pretzlaff
-                ul.site-nav__list
-                    each navItem in navigation
-                        li.site-nav__list-item(class=navItem.active?"site-nav__list-item--active":"")
-                            a.site-nav__list-item-link(href="/#{navItem.path}/") #{navItem.label}
+        .site-nav(class=isLanding?"site-nav--dark-background":"")
+            .site-nav__logo
+                a.site-nav__logo-link(href="#{basePath}") Miriam Pretzlaff
+            ul.site-nav__list
+                each navItem in navigation
+                    -var isActive = navItem.path === current.path[0]
+                    li.site-nav__list-item(class=isActive?"site-nav__list-item--active":"")
+                        a.site-nav__list-item-link(href="#{basePath}#{navItem.path}/") #{navItem.label}
     block content
 
     if !isLanding

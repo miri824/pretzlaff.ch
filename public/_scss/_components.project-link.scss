@@ -43,7 +43,7 @@
 .project-link__image,
 .project-link__image-bw {
     @include ratio(16 9);
-    background-image-position: center center;
+    background-position: center center;
     background-size: cover;
 }
 

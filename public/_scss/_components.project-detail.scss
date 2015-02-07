@@ -1,21 +1,21 @@
 $project-detail-vertical-spacing: 68px;
 .project-detail--main-image-parallax-container {
-    @include ratio(16 7);
+    @include ratio(16 10);
     position: relative;
     overflow: hidden;
     @include media-query(lap-and-up) {
+        @include ratio(16 7);
         margin-bottom: -74px;
-    }
-
-    &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        height: 74px;
-        background-color: white;
-        right: 0;
-        left: 50%;
-        z-index: -1;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            height: 74px;
+            background-color: white;
+            right: 0;
+            left: 50%;
+            z-index: -1;
+        }
     }
 }
 .project-detail--main-image-wrapper {

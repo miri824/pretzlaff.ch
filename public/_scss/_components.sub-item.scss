@@ -5,4 +5,8 @@
     &:first-child {
         border-top: solid 1px $color-light;
     }
+    &:last-child {
+        margin-bottom: $vertical-spacing;
+
+    }
 }

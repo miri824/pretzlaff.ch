@@ -3,7 +3,7 @@ $project-detail-vertical-spacing: 68px;
     @include ratio(16 7);
     position: relative;
     overflow: hidden;
-    .lap-and-up-two-third {
+    @include media-query(lap-and-up) {
         margin-bottom: -74px;
     }
 

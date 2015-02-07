@@ -1,5 +1,6 @@
 .map--contact {
+    @include ratio(1 1);
     background: url('https://maps.googleapis.com/maps/api/staticmap?center=Pfingstweidsrasse%2060,8005%20Zürich&zoom=13&size=640x640&markers=color:blue|47.3902964,8.5147876&style=inverse_lightness:false|saturation:-87|gamma:0.91') no-repeat center center;
     background-size: cover;
-    height: 640px;
+    margin-bottom: $vertical-spacing;
 }

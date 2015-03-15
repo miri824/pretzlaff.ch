@@ -1,0 +1,5 @@
+#!/bin/bash
+cd "$( dirname "${BASH_SOURCE[0]}" )"
+bower install
+harp server &
+browser-sync start --proxy 'localhost:9000' --files "public/**"

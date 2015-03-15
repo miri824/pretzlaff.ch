@@ -24,7 +24,7 @@
 }
 
 .project-link__hover-overlay {
-    @include ratio(16 9);
+    @include ratio(16 10);
     position: absolute;
     top: 0;
     width: 100%;
@@ -42,7 +42,7 @@
 
 .project-link__image,
 .project-link__image-bw {
-    @include ratio(16 9);
+    @include ratio(16 10);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

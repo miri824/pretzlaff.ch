@@ -1,15 +1,15 @@
 {
   "globals": {
-    "navigation": [
-        {
-            "label": "Projekte",
-            "path": "projekte"
-        },
-        {
-            "label": "Kontakt",
-            "path": "kontakt"
-        }
-    ],
+    "navigation": [{
+      "label": "Projekte",
+      "path": "projekte"
+    }, {
+      "label": "Über mich",
+      "path": "ueber-mich"
+    }, {
+      "label": "Kontakt",
+      "path": "kontakt"
+    }],
     "relatedProjects": ["apix", "apix", "apix"]
   }
 }

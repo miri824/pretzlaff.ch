@@ -19,4 +19,23 @@ a {
             z-index: -1;
         }
     }
+    &.inline {
+        &:before {
+            transition: background-color 0.2s;
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 1px;
+            bottom: 12%;
+            background-color: $color-light;
+            z-index: -1;
+        }
+        @include attention() {
+            &:before {
+                background-color: $color-medium;
+
+            }
+        }
+    }
 }

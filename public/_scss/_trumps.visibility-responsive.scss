@@ -1,7 +1,19 @@
 @include media-query(palm) {
-
     .palm-hide {
         display: none !important;
     }
+}
 
+@include media-query(lap-and-up) {
+    .lap-and-up-hide {
+        display: none !important;
+    }
+}
+
+.no-js .touch-only,
+.no-touch .touch-only {
+    display: none;
+}
+.touch .no-touch-only {
+    display: none;
 }

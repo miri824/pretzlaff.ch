@@ -34,7 +34,7 @@ $site-nav-height: 76px;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    margin: 0;
+    margin: 0 0 0 (- $inuit-base-spacing-unit);
     padding: 0;
     list-style: none;
     float: right;
@@ -59,5 +59,3 @@ $site-nav-height: 76px;
         color: white;
     }
 }
-
-

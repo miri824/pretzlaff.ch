@@ -1,5 +1,13 @@
 // SETTINGS
 $inuit-base-line-height: 28px;
+
+$breakpoints: (
+    "palm"          "screen and (max-width: 719px)",
+    "lap-and-up"    "screen and (min-width: 720px), print",
+    "retina"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"
+) !default;
+
+
 @import "bower_components/inuit-defaults/settings.defaults";
 @import "bower_components/inuit-responsive-settings/settings.responsive";
 @import "_scss/settings";

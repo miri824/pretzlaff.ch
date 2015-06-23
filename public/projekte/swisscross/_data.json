@@ -2,6 +2,7 @@
     "index": {
         "name": "SWISSCROSS",
         "kompetenz": "Projektleitung",
-        "links": ["www.swisscross.org"]
+        "links": ["www.swisscross.org"],
+        "relatedProjects": ["apix-web", "swissview-app", "offizin"]
     }
 }

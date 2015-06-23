@@ -38,7 +38,8 @@ block content
     if relatedProjects && relatedProjects.length
         .wrapper
             .related-projects
-                h1 Projekte
+                h1 Weitere Projekte
+                p #{current.foo}
                 ul.layout
                     for projekt in relatedProjects
                         li.layout__item.project-link.lap-and-up-one-third

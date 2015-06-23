@@ -10,6 +10,6 @@
       "label": "Kontakt",
       "path": "kontakt"
     }],
-    "relatedProjects": ["apix", "apix", "apix"]
+    "relatedProjects": ["apix-web", "swisscross", "swissview-app"]
   }
 }

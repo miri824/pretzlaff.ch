@@ -1,7 +1,8 @@
 {
     "index": {
-        "name": "APiX",
+        "name": "APiX Webseite",
         "kompetenz": "Projektleitung",
-        "links": ["www.apix.ch"]
+        "links": ["www.apix.ch"],
+        "relatedProjects": ["apix", "swisscross", "swissview-app"]
     }
 }

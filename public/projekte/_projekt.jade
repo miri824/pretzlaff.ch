@@ -33,7 +33,7 @@ block content
                     ul.project-detail__links
                         for link in links
                             li.project-detail__link
-                                a(href='http://#{link}')= link
+                                a(href='http://#{link.url || link}')= link.text || link
 
     if relatedProjects && relatedProjects.length
         .wrapper

@@ -2,6 +2,12 @@
     "index": {
         "name": "APiX",
         "kompetenz": "Luftaufnahmen",
-        "links": ["www.apix.ch", "https://vimeo.com/user20432085/videos"]
+        "links": [
+            "www.apix.ch",
+            {
+                "text": "APiX auf Vimeo",
+                "url": "vimeo.com/user20432085/videos"
+            }
+        ]
     }
 }

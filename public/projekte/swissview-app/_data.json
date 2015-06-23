@@ -2,7 +2,13 @@
     "index": {
         "name": "SWISSVIEW",
         "kompetenz": "Projektleitung",
-        "links": ["www.swissview.com", "https://itunes.apple.com/ch/app/swissview/id407726902?mt=8"],
+        "links": [
+            "swissview.com",
+            {
+                "text": "SwissView im AppStore",
+                "url": "itunes.apple.com/ch/app/swissview/id407726902?mt=8"
+            }
+        ],
         "relatedProjects": ["apix-web", "swisscross", "swissview-bluray"]
     }
 }
